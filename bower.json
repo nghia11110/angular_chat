@@ -1,0 +1,18 @@
+{
+  "name": "angular_chat",
+  "homepage": "https://github.com/nghia11110/angular_chat",
+  "authors": [
+    "Nghia Nguyen Trung <nghianguyen248@gmail.com>"
+  ],
+  "description": "first example for angular",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
