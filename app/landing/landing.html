@@ -1,0 +1,16 @@
+<div class="panel panel-default" ng-controller="LandingController as vm">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                Landing page
+            </h3>
+        </div>
+        <div class="panel-body">
+            Angularjs structure
+            <div ng-if="vm.currentUser.username">
+            Hello <b> {{vm.currentUser.username}} </b>!
+            </div>
+             <div ng-if="!vm.currentUser.username">
+            Hello guess, please login!
+            </div>
+        </div>
+    </div>
