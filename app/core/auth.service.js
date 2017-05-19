@@ -22,7 +22,7 @@
                 return authService;
 
                 function login(email, password) {
-                    return $http.post('/data/login.json', {
+                    return $http.get('/data/login.json', {
                         email: email,
                         password: password
                     }).then(function(data, status, headers, config) {
