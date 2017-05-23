@@ -22,11 +22,12 @@
                 return authService;
 
                 function login(email, password) {
-                    return $http.get('/data/login.json', {
+                    return $http.get('/data/login.json', { // for test
                         email: email,
                         password: password
                     }).then(function(data, status, headers, config) {
                         var res = data.data;
+                        res.data = res.data[Math.floor(Math.random() * 2)]; // for test
                         if (res.status) {
                             $http.defaults.headers.common.Authorization = 'Bearer ' + res.data.token;
                             $localStorage.currentUser = {

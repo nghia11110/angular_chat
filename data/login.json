@@ -1,8 +1,12 @@
         {
             "status": true,
-            "data": {
+            "data": [{
                 "token": "xxx",
                 "id": 1,
                 "name": "nghiant"
-            }
+            },{
+                "token": "yyy",
+                "id": 2,
+                "name": "nam"
+            }]
         }

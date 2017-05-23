@@ -7,7 +7,12 @@
         <div class="panel-body">
             Angularjs structure
             <div ng-if="vm.currentUser.username">
-            Hello <b> {{vm.currentUser.username}} </b>!
+                Hello <b> {{vm.currentUser.username}} </b>!
+                <button>
+                    <a ui-sref="chat">
+                        Chat box
+                    </a>
+                </button>
             </div>
              <div ng-if="!vm.currentUser.username">
             Hello guess, please login!

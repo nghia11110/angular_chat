@@ -1,0 +1,23 @@
+        <div class="panel panel-default" ng-controller="ChatController as vm">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Chat mesage
+                </h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li ng-repeat="msg in vm.messages">
+                        <b>
+                            {{msg.username}}
+                        </b>
+                        : {{msg.text}}
+                    </li>
+                </ul>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <textarea class="form-control chat-box" my-enter="vm.sendMsg();" ng-model="vm.text" placeholder="Enter your message" row="3">
+                        </textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
