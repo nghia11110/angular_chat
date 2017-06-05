@@ -7,7 +7,7 @@
             .factory('socket', socket);
 
         function socket(socketFactory) {
-            var socketConnection = io.connect('http://localhost:9000');
+            var socketConnection = io.connect('http://localhost:9000'); // for test
             var socket = socketFactory({
                 ioSocket: socketConnection
             });

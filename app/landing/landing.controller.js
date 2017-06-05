@@ -8,6 +8,6 @@
 	function LandingController(AuthService) {
 		var vm = this;
 		vm.currentUser = AuthService.currentUser;
-		console.log(vm.currentUser);
+	//	console.log(vm.currentUser);
 	}
 })();

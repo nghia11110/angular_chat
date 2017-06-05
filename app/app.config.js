@@ -14,7 +14,6 @@
 
         runBlock.$inject = ['$http', '$rootScope', '$localStorage', '$state', 'AuthService'];
         function runBlock( $http, $rootScope, $localStorage, $state, AuthService) {
-
                 if ($localStorage.currentUser) {
                     $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.currentUser.token;
                     AuthService.updateCurrentUser($localStorage.currentUser.token, $localStorage.currentUser.username);

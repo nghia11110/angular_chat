@@ -2,22 +2,22 @@
     'use strict';
 
     angular
-        .module('app.login')
-        .controller('LoginController', LoginController);
+        .module('app.signin')
+        .controller('SigninController', SigninController);
 
-    LoginController.$inject = ['$state', '$http', 'AuthService'];
-    function LoginController ($state, $http,  AuthService) {
+    SigninController.$inject = ['$state', '$http', 'AuthService'];
+    function SigninController ($state, $http,  AuthService) {
         var vm = this;
         vm.email = '';
         vm.password = '';
-        vm.login  = login;
+        vm.name = '';
+        vm.signin = signin;
 
-        function login() {
+        function signin() {
             AuthService
-                    .login(vm.email, vm.password)
+                    .signin(vm.email, vm.name, vm.password)
                     .then(
                         function(data, status, headers, config) {
-                        //    console.log(AuthService.isAuthenticated);
                             if (AuthService.isAuthenticated)
                                 return $state.go('landing');
                         },
@@ -26,6 +26,5 @@
                         }
                     );
         };
-
     }
 })();
