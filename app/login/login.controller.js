@@ -16,10 +16,13 @@
             AuthService
                     .login(vm.email, vm.password)
                     .then(
-                        function(data, status, headers, config) {
-                        //    console.log(AuthService.isAuthenticated);
-                            if (AuthService.isAuthenticated)
+                        function(res) {
+                            if (AuthService.isAuthenticated()) {
                                 return $state.go('landing');
+                            }
+                            else {
+                                alert(res.data);
+                            }
                         },
                         function (error) {
                             alert(error);

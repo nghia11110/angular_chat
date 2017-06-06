@@ -18,7 +18,7 @@
                          this.currentUser.username = username;
                     },
                     isAuthenticated: function() {
-                        return this.currentUser.token === null ? true : false;
+                        return this.currentUser.token !== null ? true : false;
                     }
                 }
                 return authService;
@@ -38,7 +38,7 @@
                             authService.currentUser.token = res.token;
                             authService.currentUser.username = res.data.name;
                         }
-                        return;
+                        return res;
                     });
                 }
 
